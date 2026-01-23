@@ -22,7 +22,7 @@ function Footer() {
           <h4 className="text-white mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/causes" className="hover:text-white">Our Causes</Link></li>
+            <li><Link to="/terms" className="hover:text-white">Terms and conditions</Link></li>
             <li><Link to="/gallery" className="hover:text-white">Gallery</Link></li>
             <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
