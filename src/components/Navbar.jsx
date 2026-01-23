@@ -25,7 +25,7 @@ function Navbar() {
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Causes", path: "/causes" },
+            { name: "Terms and Conditions", path: "/terms" },
             { name: "Gallery", path: "/gallery" },
             { name: "Contact", path: "/contact" }
           ].map((item) => (
@@ -65,7 +65,7 @@ function Navbar() {
           {[
             { name: "Home", path: "/" },
             { name: "About", path: "/about" },
-            { name: "Causes", path: "/causes" },
+            { name: "Terms and Conditions", path: "/terms" },
             { name: "Gallery", path: "/gallery" },
             { name: "Contact", path: "/contact" }
           ].map((item) => (
