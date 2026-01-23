@@ -26,7 +26,7 @@ function Router() {
       {/* Public Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/causes" element={<Causes />} />
+      <Route path="/terms" element={<Causes />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/donate" element={<Donate />} />
       <Route path="/contact" element={<Contact />} />
