@@ -1,35 +1,41 @@
 import { motion } from "framer-motion";
 
-function Causes() {
-  const causes = [
+function TermsAndConditions() {
+  const sections = [
     {
-      title: "Emotional Well-being",
+      title: "Terms & Conditions",
       desc:
-        "We work towards improving mental and emotional health through awareness sessions, one-to-one guidance, and community support programs. Our initiatives focus on reducing stress, anxiety, and emotional isolation.",
+        "Welcome to Lifefullness Charitable Trust. By accessing or using our website, you agree to comply with the following terms and conditions. These terms govern your use of our website and services.",
       points: [
-        "Mental health awareness programs",
-        "Emotional support & counseling guidance",
-        "Workshops on stress and resilience",
+        "This website is intended to share information about our charitable activities and initiatives.",
+        "Users agree to use this website only for lawful and ethical purposes.",
+        "All content including text, images, logos, and materials belong to Lifefullness Charitable Trust.",
+        "Unauthorized use or duplication of website content is prohibited.",
+        "The Trust reserves the right to modify website content or policies at any time.",
       ],
     },
     {
-      title: "Community Care",
+      title: "Privacy Policy",
       desc:
-        "Our community care initiatives are designed to support individuals and families facing social, emotional, or economic challenges. We believe compassion-driven action can restore dignity and hope.",
+        "Lifefullness Charitable Trust respects your privacy and is committed to protecting your personal information shared with us.",
       points: [
-        "Support for underprivileged families",
-        "Community welfare initiatives",
-        "Compassion-based outreach programs",
+        "We may collect basic personal details such as name, email address, phone number, and donation information.",
+        "Personal information is collected only for communication, donation processing, and service improvement.",
+        "We do not sell, trade, or share your personal data with third parties.",
+        "Appropriate security measures are implemented to safeguard user data.",
+        "By using our website, you consent to our privacy practices.",
       ],
     },
     {
-      title: "Mindful Living",
+      title: "Refund & Cancellation Policy",
       desc:
-        "We encourage conscious living by promoting awareness, balance, and purposeful choices. Through education and practice, we help individuals align their inner well-being with daily life.",
+        "As a charitable organization, all donations made to Lifefullness Charitable Trust are voluntary and used to support our initiatives.",
       points: [
-        "Mindfulness awareness sessions",
-        "Lifestyle balance programs",
-        "Value-based living education",
+        "Donations once made are generally non-refundable.",
+        "In case of a genuine error or duplicate transaction, donors may request a refund within 7 days.",
+        "Refund requests must be submitted via email with transaction details.",
+        "Approved refunds will be processed within 7–10 working days.",
+        "Refunds will be credited to the original payment method used.",
       ],
     },
   ];
@@ -44,16 +50,18 @@ function Causes() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl mb-4">Our Causes</h1>
+          <h1 className="text-4xl md:text-5xl mb-4">
+            Terms & Conditions
+          </h1>
           <p className="text-slate-700 max-w-3xl mx-auto">
-            At Lifefullness Charitable Trust, our causes are rooted in compassion,
-            emotional balance, and conscious community development.
+            Please read the following terms, privacy policy, and refund
+            guidelines carefully before using our website or making a donation.
           </p>
         </motion.div>
 
-        {/* CAUSES */}
+        {/* CONTENT SECTIONS */}
         <div className="space-y-14">
-          {causes.map((item, i) => (
+          {sections.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
@@ -69,7 +77,7 @@ function Causes() {
                 {item.desc}
               </p>
 
-              <ul className="max-w-2xl mx-auto space-y-3 text-slate-600 list-disc pl-6">
+              <ul className="max-w-3xl mx-auto space-y-3 text-slate-600 list-disc pl-6">
                 {item.points.map((point, idx) => (
                   <li key={idx}>{point}</li>
                 ))}
@@ -78,20 +86,20 @@ function Causes() {
           ))}
         </div>
 
-        {/* IMPACT STATEMENT */}
+        {/* FOOTER INFO */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="mt-20 text-center"
         >
-          <h2 className="text-3xl mb-4">
-            Why Our Work Matters
-          </h2>
-          <p className="text-slate-700 max-w-4xl mx-auto">
-            Emotional well-being, social care, and mindful living are deeply
-            interconnected. By addressing these areas together, we create a
-            holistic approach to individual and community transformation.
-            Your support helps us extend this impact to more lives.
+          <p className="text-slate-700">
+            <b>Contact:</b> contact@lifefullness.org
+          </p>
+          <p className="text-slate-600 mt-2">
+            Lifefullness Charitable Trust, India
+          </p>
+          <p className="text-slate-500 text-sm mt-2">
+            Last Updated: January 2026
           </p>
         </motion.div>
 
@@ -100,4 +108,4 @@ function Causes() {
   );
 }
 
-export default Causes;
+export default TermsAndConditions;
