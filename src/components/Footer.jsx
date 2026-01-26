@@ -9,7 +9,7 @@ function Footer() {
         {/* About */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
           <h3 className="text-white text-lg mb-4">
-            Lifefullness Charitable Trust
+            LTCharitableTrust
           </h3>
           <p className="text-sm leading-relaxed">
             A Bangalore-based non-profit organization committed to compassion,
@@ -31,9 +31,9 @@ function Footer() {
         {/* Contact */}
         <div>
           <h4 className="text-white mb-4">Contact</h4>
-          <p className="text-sm">📍 Bangalore, Karnataka, India</p>
-          <p className="text-sm">📞 +91 80956 27860</p>
-          <p className="text-sm">✉️ contact@lifefullness.org</p>
+          <p className="text-sm">📍 NO 153, 6TH CROSS, VYALI KAVAL LAYOUT, BANGALORE NORTH, VIJAYANAGAR, BANGALORE, 560040 KARNATAKA INDIA</p>
+          <p className="text-sm">📞 +91 9742809955</p>
+          <p className="text-sm">✉️ BEVEDHA.MURTHY@GMAIL.COM</p>
         </div>
 
         {/* Donate */}
@@ -49,7 +49,7 @@ function Footer() {
       </div>
 
       <div className="text-center text-xs text-gray-400 py-4 border-t border-gray-700">
-        © {new Date().getFullYear()} Lifefullness Charitable Trust · Transparency & Trust
+        © {new Date().getFullYear()} LTCharitableTrust · Transparency & Trust
       </div>
     </footer>
   );
