@@ -19,7 +19,7 @@ function Home() {
           </motion.h2>
 
           <p className="text-slate-700 max-w-3xl mx-auto mb-12">
-            Lifefullness Charitable Trust is a Bangalore-based non-profit
+            LTCharitableTrust is a Bangalore-based non-profit
             organization working to uplift individuals and communities through
             emotional well-being, compassion, and conscious living.
           </p>
