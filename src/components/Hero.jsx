@@ -42,7 +42,7 @@ function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-6 text-lg md:text-xl text-slate-700 max-w-3xl mx-auto"
         >
-          Lifefullness Charitable Trust is a Bangalore-based non-profit organization
+          LTCharitableTrust is a Bangalore-based non-profit organization
           dedicated to emotional well-being, community upliftment, and conscious
           living. Your support helps us reach hearts, heal lives, and restore hope.
         </motion.p>
