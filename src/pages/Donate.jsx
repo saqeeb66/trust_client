@@ -21,7 +21,7 @@ function Donate() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="card text-left">
             <h2 className="text-2xl mb-4">Bank Donation</h2>
-            <p><b>Account Name:</b> Lifefullness Charitable Trust</p>
+            <p><b>Account Name:</b> LTCharitableTrust</p>
             <p><b>Account Number:</b> XXXXXXXXXXXX</p>
             <p><b>IFSC Code:</b> XXXXXXXX</p>
             <p><b>Bank:</b> XXXXX Bank, Bangalore</p>
