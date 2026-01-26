@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { getGalleryImages } from "../services/galleryService";
+import { getGallery } from "../services/galleryService";
 
 function Gallery() {
   const [gallery, setGallery] = useState([]);
@@ -12,8 +12,8 @@ function Gallery() {
 
   const fetchGallery = async () => {
     try {
-      const res = await getGalleryImages();
-      setGallery(res.data);
+      const data = await getGallery();
+      setGallery(data);
     } catch (err) {
       console.error("Failed to fetch gallery", err);
     } finally {
@@ -40,26 +40,34 @@ function Gallery() {
           </p>
         )}
 
-        {/* Empty State */}
+        {/* Empty */}
         {!loading && gallery.length === 0 && (
           <p className="text-center text-slate-600">
-            No images available yet.
+            No media available yet.
           </p>
         )}
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {gallery.map((img) => (
+          {gallery.map((item) => (
             <motion.div
-              key={img._id}
+              key={item._id}
               whileHover={{ scale: 1.04 }}
               className="overflow-hidden rounded-2xl shadow-md bg-white"
             >
-              <img
-                src={img.imageUrl}
-                alt="Gallery"
-                className="w-full h-64 object-cover transition duration-500"
-              />
+              {item.type === "video" ? (
+                <video
+                  src={item.fileUrl}
+                  controls
+                  className="w-full h-64 object-cover"
+                />
+              ) : (
+                <img
+                  src={item.fileUrl}
+                  alt="Gallery"
+                  className="w-full h-64 object-cover transition duration-500"
+                />
+              )}
             </motion.div>
           ))}
         </div>
