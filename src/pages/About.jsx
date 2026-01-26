@@ -5,7 +5,7 @@ function About() {
     {
       title: "Who We Are",
       text:
-        "Lifefullness Charitable Trust is a non-profit organization based in Bangalore, India, established with the purpose of nurturing emotional well-being, compassion, and conscious living. We work at the intersection of mental health awareness, community care, and value-based living to support individuals and families across diverse backgrounds.",
+        "LTCharitableTrust is a non-profit organization based in Bangalore, India, established with the purpose of nurturing emotional well-being, compassion, and conscious living. We work at the intersection of mental health awareness, community care, and value-based living to support individuals and families across diverse backgrounds.",
     },
     {
       title: "Our Vision",
@@ -40,7 +40,7 @@ function About() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl mb-4">
-            About Lifefullness Charitable Trust
+            About LTCharitableTrust
           </h1>
           <p className="text-slate-700 max-w-3xl mx-auto">
             A charitable trust dedicated to compassion, emotional well-being,
@@ -80,7 +80,7 @@ function About() {
           </h2>
           <p className="text-slate-700 max-w-4xl mx-auto leading-relaxed">
             In today’s fast-paced world, emotional well-being and human
-            connection are often overlooked. Lifefullness Charitable Trust
+            connection are often overlooked. LTCharitableTrust
             exists to remind individuals and communities of the importance of
             empathy, self-awareness, and conscious living. By addressing
             emotional and social challenges together, we strive to create
