@@ -59,9 +59,7 @@ function Hero() {
             Register
           </Link>
 
-          <Link to="/about" className="btn-outline text-lg px-8 py-3">
-            Know Our Mission
-          </Link>
+          
         </motion.div>
       </motion.div>
     </section>
