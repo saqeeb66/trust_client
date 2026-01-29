@@ -74,7 +74,7 @@ function Home() {
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1607746882042-944635dfe10e')",
+              "url('https://res.cloudinary.com/di27vloho/image/upload/v1769420634/lifefullness_gallery/fpiiaj2gyhhc28bp3suz.jpg')",
           }}
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
