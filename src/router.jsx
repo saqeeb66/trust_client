@@ -19,7 +19,7 @@ import ContactQueries from "./admin/ContactQueries";
 import AdminProfile from "./admin/AdminProfile";
 
 import ProtectedRoute from "./components/ProtectedRoute";
-import MainLayout from "./MainLayout";
+import MainLayout from "./layout//MainLayout";
 
 function Router() {
   return (
