@@ -2,10 +2,6 @@ import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-/* =======================
-   HOME PAGE
-======================= */
-
 function Home() {
   const [open, setOpen] = useState(false);
 
@@ -19,53 +15,58 @@ function Home() {
     {
       title: "Emotional Well-being",
       desc:
-        "Through awareness sessions and supportive initiatives, we have helped individuals understand emotional health, reduce stress, and build inner resilience.",
+        "Programs for mental-health awareness, emotional healing, stress reduction, and achieving inner balance.",
     },
     {
       title: "Community Support",
       desc:
-        "Our outreach programs focus on compassion-driven care for families and individuals facing emotional and social challenges.",
+        "Compassion-driven services that assist families and individuals facing emotional and social challenges.",
     },
     {
       title: "Conscious Living",
       desc:
-        "We promote mindful and value-based living practices that help people lead balanced and purpose-driven lives.",
+        "Guidance for mindful, purposeful, and values-based lifestyles rooted in clarity and balance.",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Ananya R",
+      text:
+        "This trust helped me rediscover clarity and emotional strength during one of the toughest phases of my life.",
+    },
+    {
+      name: "Rahul S",
+      text:
+        "The programs are deeply meaningful and practical. I feel more balanced and focused than ever before.",
+    },
+    {
+      name: "Meera K",
+      text:
+        "A place of genuine compassion. Their guidance helped my family heal and grow together.",
     },
   ];
 
   return (
     <>
-      {/* =======================
-          NAVBAR
-      ======================= */}
+      {/* ================= NAVBAR ================= */}
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
             <img src="/logo.jpeg" alt="Logo" className="h-10 w-auto" />
-            <span className="text-xl font-semibold text-dark hover:text-primary transition">
+            <span className="text-xl font-semibold text-dark">
               LtCharitableTrust
             </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            {[
-              { name: "About", path: "/about" },
-              { name: "Terms", path: "/terms" },
-              { name: "Gallery", path: "/gallery" },
-              { name: "Contact", path: "/contact" },
-            ].map((item) => (
+            {["About", "Terms", "Gallery", "Contact"].map((item) => (
               <NavLink
-                key={item.name}
-                to={item.path}
-                className={({ isActive }) =>
-                  `text-sm font-medium ${
-                    isActive
-                      ? "text-primary"
-                      : "text-slate-700 hover:text-primary"
-                  }`
-                }
+                key={item}
+                to={`/${item.toLowerCase()}`}
+                className="text-sm font-medium text-slate-700 hover:text-primary"
               >
-                {item.name}
+                {item}
               </NavLink>
             ))}
             <Link to="/donate" className="btn-primary">
@@ -73,41 +74,13 @@ function Home() {
             </Link>
           </div>
 
-          <button
-            onClick={() => setOpen(!open)}
-            className="md:hidden text-2xl"
-          >
+          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
             ☰
           </button>
         </nav>
-
-        {open && (
-          <div className="md:hidden bg-white shadow-md px-6 py-6 space-y-4">
-            {[
-              { name: "About", path: "/about" },
-              { name: "Terms", path: "/terms" },
-              { name: "Gallery", path: "/gallery" },
-              { name: "Contact", path: "/contact" },
-            ].map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                onClick={() => setOpen(false)}
-                className="block text-slate-700 hover:text-primary"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link to="/donate" className="block text-center btn-primary">
-              Donate
-            </Link>
-          </div>
-        )}
       </header>
 
-      {/* =======================
-          HERO
-      ======================= */}
+      {/* ================= HERO ================= */}
       <section className="relative min-h-[95vh] flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -131,9 +104,8 @@ function Home() {
           </h1>
 
           <p className="mt-6 text-lg text-slate-700 max-w-3xl mx-auto">
-            Through holistic education, we guide people towards modern
-            spirituality, healthier relationships, balanced living, and
-            purposeful careers.
+            Through holistic education and conscious guidance, we help
+            individuals lead balanced, compassionate, and purpose-driven lives.
           </p>
 
           <div className="mt-10">
@@ -144,14 +116,34 @@ function Home() {
         </motion.div>
       </section>
 
-      {/* =======================
-          IMPACT
-      ======================= */}
+      {/* ================= MISSION & VISION ================= */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+          <motion.div whileInView={{ opacity: 1 }} initial={{ opacity: 0 }}>
+            <h2 className="text-3xl mb-4">Our Mission</h2>
+            <p className="text-slate-700 leading-relaxed">
+              To empower individuals with timeless wisdom and contemporary
+              insights, fostering a more compassionate, balanced, and
+              enlightened society.
+            </p>
+          </motion.div>
+
+          <motion.div whileInView={{ opacity: 1 }} initial={{ opacity: 0 }}>
+            <h2 className="text-3xl mb-4">Our Vision</h2>
+            <p className="text-slate-700 leading-relaxed">
+              A world where every individual discovers their true potential,
+              lives with purpose, and contributes meaningfully to the greater
+              good.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ================= IMPACT STATS ================= */}
       <section className="bg-light py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-4xl mb-6">Our Impact</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16">
+          <h2 className="text-4xl mb-16">Our Impact</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {stats.map((item, i) => (
               <motion.div
                 key={i}
@@ -168,36 +160,64 @@ function Home() {
         </div>
       </section>
 
-      {/* =======================
-          FOOTER
-      ======================= */}
-      <footer className="bg-dark text-gray-300">
-        <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
-          <div className="text-center md:text-left">
-            <h4 className="text-white mb-4">Contact</h4>
-            <Link to="/contact" className="btn-primary">
-              Contact Us
-            </Link>
-          </div>
-
-          <div className="text-center">
-            <h4 className="text-white mb-4">Follow Us</h4>
-            <div className="flex justify-center gap-6 text-2xl">
-              📷 📘 ▶️
-            </div>
-          </div>
-
-          <div className="text-center md:text-right">
-            <h4 className="text-white mb-4">
-              Register for Transformation
-            </h4>
-            <Link to="/register" className="btn-primary">
-              Register
-            </Link>
+      {/* ================= FOCUS AREAS ================= */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl text-center mb-16">What We Focus On</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {focusAreas.map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }}
+                className="bg-light rounded-xl p-8 text-center shadow"
+              >
+                <h3 className="text-2xl mb-4">{item.title}</h3>
+                <p className="text-slate-600">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="text-center text-xs text-gray-400 py-4 border-t border-gray-700">
+      {/* ================= TESTIMONIALS ================= */}
+      <section className="bg-light py-24">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2 className="text-4xl mb-16">Voices of Transformation</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                className="bg-white p-8 rounded-xl shadow"
+              >
+                <p className="text-slate-700 italic mb-4">
+                  “{t.text}”
+                </p>
+                <h4 className="font-semibold">{t.name}</h4>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= FINAL CTA ================= */}
+      <section className="py-24 bg-primary text-white text-center">
+        <h2 className="text-4xl mb-6">Begin Your Transformation</h2>
+        <p className="max-w-2xl mx-auto mb-10 text-white/90">
+          Join us in building a compassionate, conscious, and emotionally
+          balanced society.
+        </p>
+        <Link
+          to="/register"
+          className="bg-white text-primary px-10 py-4 rounded-xl font-medium"
+        >
+          Register Now
+        </Link>
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="bg-dark text-gray-300">
+        <div className="text-center text-xs py-6">
           © {new Date().getFullYear()} LTCharitableTrust · Transparency & Trust
         </div>
       </footer>
