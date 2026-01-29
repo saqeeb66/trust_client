@@ -30,8 +30,7 @@ function Hero() {
           transition={{ delay: 0.2 }}
           className="text-4xl md:text-6xl font-semibold leading-tight text-dark"
         >
-          Empowering Individuals,
-          <span className="text-primary"> Compassionate</span>
+          Empowering Individuals
           <br />
          Enriching Lives
         </motion.h1>
