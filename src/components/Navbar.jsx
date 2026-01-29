@@ -8,14 +8,14 @@ function Navbar() {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
 
-        {/* Logo */}
+        {/* Logo + Brand (Home Link) */}
         <Link to="/" className="flex items-center gap-3">
           <img
             src="/logo.jpeg"
             alt="Lifefullness Logo"
             className="h-10 w-auto"
           />
-          <span className="text-xl font-semibold text-dark">
+          <span className="text-xl font-semibold text-dark hover:text-primary transition">
             LtCharitableTrust
           </span>
         </Link>
@@ -23,7 +23,6 @@ function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {[
-            { name: "Home", path: "/" },
             { name: "About", path: "/about" },
             { name: "Terms and Conditions", path: "/terms" },
             { name: "Gallery", path: "/gallery" },
@@ -63,7 +62,6 @@ function Navbar() {
       {open && (
         <div className="md:hidden bg-white shadow-md px-6 py-6 space-y-4">
           {[
-            { name: "Home", path: "/" },
             { name: "About", path: "/about" },
             { name: "Terms and Conditions", path: "/terms" },
             { name: "Gallery", path: "/gallery" },
