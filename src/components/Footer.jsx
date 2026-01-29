@@ -1,65 +1,88 @@
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  FaInstagram,
+  FaYoutube,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-dark text-gray-300">
-      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+    <footer className="relative bg-dark overflow-hidden">
+      {/* Subtle glow background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 via-transparent to-emerald-900/20" />
 
-        {/* LEFT: Contact */}
-        <div className="text-center md:text-left">
-          <h4 className="text-white mb-4 text-lg">Contact</h4>
-          <Link to="/contact" className="btn-primary inline-block">
-            Contact Us
-          </Link>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        className="relative max-w-7xl mx-auto px-6 py-8 grid grid-cols-3 items-center"
+      >
+        {/* LEFT (empty for balance) */}
+        <div />
 
-        {/* CENTER: Follow Us */}
-        <div className="text-center">
-          <h4 className="text-white mb-4 text-lg">Follow Us</h4>
-          <div className="flex justify-center gap-6 text-2xl">
-            <a
+        {/* CENTER (empty intentionally) */}
+        <div />
+
+        {/* RIGHT CONTENT */}
+        <div className="flex flex-col items-end gap-3">
+          {/* Logo */}
+          <img
+            src="/logo.jpeg"
+            alt="LTCharitableTrust"
+            className="h-10 w-auto opacity-90"
+          />
+
+          {/* Small description */}
+          <p className="text-xs text-gray-400 text-right max-w-xs leading-relaxed">
+            Empowering individuals through emotional well-being and conscious
+            living.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 text-lg mt-2">
+            <motion.a
+              whileHover={{ scale: 1.3, y: -3 }}
               href="https://instagram.com"
               target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-primary transition"
             >
-              📷
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition"
-            >
-              📘
-            </a>
-            <a
+              <FaInstagram />
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.3, y: -3 }}
               href="https://youtube.com"
               target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-primary transition"
             >
-              ▶️
-            </a>
+              <FaYoutube />
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.3, y: -3 }}
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-primary transition"
+            >
+              <FaLinkedin />
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.3, y: -3 }}
+              href="https://wa.me/917019980314"
+              target="_blank"
+              rel="noreferrer"
+              className="text-gray-400 hover:text-primary transition"
+            >
+              <FaWhatsapp />
+            </motion.a>
           </div>
         </div>
-
-        {/* RIGHT: Register */}
-        <div className="text-center md:text-right">
-          <h4 className="text-white mb-4 text-lg">
-            Register for Transformation
-          </h4>
-          <Link to="/register" className="btn-primary inline-block">
-            Register
-          </Link>
-        </div>
-
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="text-center text-xs text-gray-400 py-4 border-t border-gray-700">
-        © {new Date().getFullYear()} LTCharitableTrust · Transparency & Trust
-      </div>
+      </motion.div>
     </footer>
   );
 }
