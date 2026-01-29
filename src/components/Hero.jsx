@@ -30,10 +30,10 @@ function Hero() {
           transition={{ delay: 0.2 }}
           className="text-4xl md:text-6xl font-semibold leading-tight text-dark"
         >
-          Together We Can Build a
+          Empowering Individuals,
           <span className="text-primary"> Compassionate</span>
           <br />
-          & Conscious Society
+         Enriching Lives
         </motion.h1>
 
         <motion.p
@@ -42,9 +42,9 @@ function Hero() {
           transition={{ delay: 0.4 }}
           className="mt-6 text-lg md:text-xl text-slate-700 max-w-3xl mx-auto"
         >
-          LTCharitableTrust is a Bangalore-based non-profit organization
-          dedicated to emotional well-being, community upliftment, and conscious
-          living. Your support helps us reach hearts, heal lives, and restore hope.
+          Through holistic education, we guide people towards
+          modern spirituality, healthier relationships,
+          balanced living, and purposeful careers.     
         </motion.p>
 
         {/* CTA */}
@@ -55,7 +55,7 @@ function Hero() {
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6"
         >
           <Link to="/donate" className="btn-primary text-lg px-8 py-3">
-            Donate & Change a Life
+            Register
           </Link>
 
           <Link to="/about" className="btn-outline text-lg px-8 py-3">
