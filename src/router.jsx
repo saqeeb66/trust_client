@@ -19,19 +19,24 @@ import ContactQueries from "./admin/ContactQueries";
 import AdminProfile from "./admin/AdminProfile";
 
 import ProtectedRoute from "./components/ProtectedRoute";
+import MainLayout from "./MainLayout";
 
 function Router() {
   return (
     <Routes>
-      {/* Public Routes */}
+      {/* HOME — has its own Navbar & Footer */}
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/terms" element={<Causes />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/donate" element={<Donate />} />
-      <Route path="/contact" element={<Contact />} />
 
-      {/* Admin Routes */}
+      {/* PUBLIC PAGES — shared Navbar & Footer */}
+      <Route element={<MainLayout />}>
+        <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Causes />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+
+      {/* ADMIN — NO Navbar / Footer */}
       <Route path="/admin/login" element={<AdminLogin />} />
 
       <Route
@@ -43,12 +48,59 @@ function Router() {
         }
       />
 
-      <Route path="/admin/banners" element={<ProtectedRoute><ManageBanners /></ProtectedRoute>} />
-      <Route path="/admin/content" element={<ProtectedRoute><ManageContent /></ProtectedRoute>} />
-      <Route path="/admin/gallery" element={<ProtectedRoute><ManageGallery /></ProtectedRoute>} />
-      <Route path="/admin/notices" element={<ProtectedRoute><ManageNotices /></ProtectedRoute>} />
-      <Route path="/admin/queries" element={<ProtectedRoute><ContactQueries /></ProtectedRoute>} />
-      <Route path="/admin/profile" element={<ProtectedRoute><AdminProfile /></ProtectedRoute>} />
+      <Route
+        path="/admin/banners"
+        element={
+          <ProtectedRoute>
+            <ManageBanners />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin/content"
+        element={
+          <ProtectedRoute>
+            <ManageContent />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin/gallery"
+        element={
+          <ProtectedRoute>
+            <ManageGallery />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin/notices"
+        element={
+          <ProtectedRoute>
+            <ManageNotices />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin/queries"
+        element={
+          <ProtectedRoute>
+            <ContactQueries />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/admin/profile"
+        element={
+          <ProtectedRoute>
+            <AdminProfile />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }
