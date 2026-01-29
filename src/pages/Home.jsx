@@ -74,7 +74,10 @@ function Home() {
             </Link>
           </div>
 
-          <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-2xl"
+          >
             ☰
           </button>
         </nav>
@@ -139,7 +142,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= IMPACT STATS ================= */}
+      {/* ================= IMPACT ================= */}
       <section className="bg-light py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl mb-16">Our Impact</h2>
@@ -200,7 +203,7 @@ function Home() {
         </div>
       </section>
 
-      {/* ================= FINAL CTA ================= */}
+      {/* ================= CTA ================= */}
       <section className="py-24 bg-primary text-white text-center">
         <h2 className="text-4xl mb-6">Begin Your Transformation</h2>
         <p className="max-w-2xl mx-auto mb-10 text-white/90">
@@ -217,7 +220,50 @@ function Home() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-dark text-gray-300">
-        <div className="text-center text-xs py-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12"
+        >
+          <div>
+            <h3 className="text-white text-xl font-semibold mb-4">
+              LTCharitableTrust
+            </h3>
+            <p className="text-sm text-gray-400">
+              Empowering individuals through emotional well-being and conscious
+              living.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/terms">Terms</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-4">Contact</h4>
+            <p className="text-sm">Bangalore, Karnataka</p>
+            <p className="text-sm">+91 70199 80314</p>
+          </div>
+
+          <div>
+            <h4 className="text-white mb-4">Follow Us</h4>
+            <div className="flex gap-4 text-xl">
+              <i className="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-youtube"></i>
+              <i className="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-whatsapp"></i>
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="border-t border-gray-700 text-center text-xs py-5 text-gray-400">
           © {new Date().getFullYear()} LTCharitableTrust · Transparency & Trust
         </div>
       </footer>
