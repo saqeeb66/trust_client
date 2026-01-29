@@ -24,16 +24,17 @@ function Hero() {
         transition={{ duration: 1 }}
         className="relative z-10 max-w-5xl text-center px-6"
       >
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="text-4xl md:text-6xl font-semibold leading-tight text-dark"
-        >
-          Empowering Individuals
-          <br />
-         Enriching Lives
-        </motion.h1>
+       <motion.h1
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.2 }}
+  className="text-4xl md:text-6xl font-semibold leading-tight text-dark"
+>
+  <span className="text-green-600">Empowering</span> Individuals
+  <br />
+  <span className="text-green-600">Enriching</span> Lives
+</motion.h1>
+
 
         <motion.p
           initial={{ opacity: 0 }}
