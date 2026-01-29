@@ -2,10 +2,9 @@ import { motion } from "framer-motion";
 
 function Impact() {
   const stats = [
-    { value: "500+", label: "Lives Impacted" },
-    { value: "20+", label: "Community Programs" },
-    { value: "100%", label: "Transparent Usage" },
-    { value: "Bangalore", label: "Primary Reach" },
+    { value: "30000+", label: "Lives Impacted" },
+    { value: "8+", label: "Years of Dedicated Service" },
+    { value: "10000+", label: "Lives Transformed" },
   ];
 
   const focusAreas = [
@@ -48,7 +47,7 @@ function Impact() {
         </motion.div>
 
         {/* STATS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24">
           {stats.map((item, i) => (
             <motion.div
               key={i}
