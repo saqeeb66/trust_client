@@ -7,6 +7,7 @@ import Causes from "./pages/Causes";
 import Gallery from "./pages/Gallery";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
+import Courses from "./pages/Courses"; // ✅ ADD THIS
 
 // Admin
 import AdminLogin from "./admin/AdminLogin";
@@ -19,7 +20,7 @@ import ContactQueries from "./admin/ContactQueries";
 import AdminProfile from "./admin/AdminProfile";
 
 import ProtectedRoute from "./components/ProtectedRoute";
-import MainLayout from "./layout//MainLayout";
+import MainLayout from "./layout/MainLayout";
 
 function Router() {
   return (
@@ -30,13 +31,14 @@ function Router() {
       {/* PUBLIC PAGES — shared Navbar & Footer */}
       <Route element={<MainLayout />}>
         <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} /> {/* ✅ ADD THIS */}
         <Route path="/terms" element={<Causes />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
 
-      {/* ADMIN — NO Navbar / Footer */}
+      {/* ADMIN */}
       <Route path="/admin/login" element={<AdminLogin />} />
 
       <Route
