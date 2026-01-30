@@ -3,13 +3,13 @@ import { Routes, Route } from "react-router-dom";
 // Public Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Courses from "./pages/Courses";
 import Causes from "./pages/Causes";
 import Gallery from "./pages/Gallery";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
-import Courses from "./pages/Courses"; // ✅ ADD THIS
 
-// Admin
+// Admin Pages
 import AdminLogin from "./admin/AdminLogin";
 import Dashboard from "./admin/Dashboard";
 import ManageBanners from "./admin/ManageBanners";
@@ -25,20 +25,21 @@ import MainLayout from "./layout/MainLayout";
 function Router() {
   return (
     <Routes>
-      {/* HOME — has its own Navbar & Footer */}
+      {/* Home */}
       <Route path="/" element={<Home />} />
 
-      {/* PUBLIC PAGES — shared Navbar & Footer */}
+      {/* Public Pages */}
       <Route element={<MainLayout />}>
         <Route path="/about" element={<About />} />
-        <Route path="/courses" element={<Courses />} /> {/* ✅ ADD THIS */}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:courseSlug" element={<Courses />} />
         <Route path="/terms" element={<Causes />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
 
-      {/* ADMIN */}
+      {/* Admin */}
       <Route path="/admin/login" element={<AdminLogin />} />
 
       <Route
