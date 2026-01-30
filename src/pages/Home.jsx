@@ -74,7 +74,7 @@ function Home() {
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
             backgroundImage:
-              "url('https://res.cloudinary.com/di27vloho/image/upload/v1769420634/lifefullness_gallery/fpiiaj2gyhhc28bp3suz.jpg')",
+              "url('https://res.cloudinary.com/di27vloho/image/upload/v1769799532/DSC07587_muhzfs.jpg')",
           }}
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
