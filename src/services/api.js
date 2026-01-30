@@ -4,12 +4,12 @@ const API = axios.create({
   baseURL: "https://server-w3zp.onrender.com/api",
 });
 
-API.interceptors.request.use((req) => {
-  const token = localStorage.getItem("adminToken"); // ✅ FIX HERE
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("adminToken");
   if (token) {
-    req.headers.Authorization = `Bearer ${token}`;
+    config.headers.Authorization = `Bearer ${token}`;
   }
-  return req;
+  return config;
 });
 
 export default API;
