@@ -71,8 +71,8 @@ function Contact() {
 
             <div className="card">
               <h3 className="text-xl mb-2">Contact Details</h3>
-              <p className="text-slate-600">📞 +91 9742809955</p>
-              <p className="text-slate-600">✉️ BEVEDHA.MURTHY@GMAIL.COM</p>
+              <p className="text-slate-600">📞 +91 9901814446</p>
+              <p className="text-slate-600">✉️ ltcharitabletrustblr@gmail.com</p>
             </div>
 
             <div className="card">
