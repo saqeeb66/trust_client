@@ -50,7 +50,7 @@ function Navbar() {
           <NavLink to="/gallery" className="nav-link">Gallery</NavLink>
           <NavLink to="/contact" className="nav-link">Contact</NavLink>
 
-          <Link to="/donate" className="btn-primary">Donate</Link>
+          <Link to="/donate" className="btn-primary">Register</Link>
         </div>
 
         {/* Mobile Button */}
@@ -80,7 +80,7 @@ function Navbar() {
           <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
           <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
           <Link to="/donate" onClick={() => setOpen(false)} className="btn-primary block text-center">
-            Donate
+            Register
           </Link>
         </div>
       )}
