@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const courses = [
   {
+    slug: "swarga-srushti",
     title: "Swarga Srushti",
     duration: "5-Day Residential Program",
     highlight: "Flagship Transformation Workshop",
@@ -16,6 +18,7 @@ const courses = [
       "Ideal for individuals seeking breakthroughs in mindset, relationships, career, and purpose.",
   },
   {
+    slug: "life-transformation",
     title: "Life Transformation Workshop",
     duration: "Foundational Program",
     highlight: "Clarity • Mindset • Success",
@@ -30,6 +33,7 @@ const courses = [
       "Perfect for those beginning their transformation journey and seeking direction, confidence, and success.",
   },
   {
+    slug: "daily-magic-practice",
     title: "Daily Magic Practice",
     duration: "Ongoing Daily Practice",
     highlight: "Holistic Living • Inner Energy • Joy",
@@ -45,6 +49,7 @@ const courses = [
       "A simple yet powerful daily ritual suitable for all levels, nurturing mindfulness, inner peace, and soulful well-being.",
   },
   {
+    slug: "health-workshop",
     title: "Health Workshop",
     duration: "Holistic Health Program",
     highlight: "Disease-Free • Vitality • Self-Healing",
@@ -60,6 +65,7 @@ const courses = [
       "Ideal for individuals seeking holistic health, stronger immunity, and a vibrant, energized life.",
   },
   {
+    slug: "hwlh-workshop",
     title: "Health • Wealth • Love • Happiness (HWLH) Workshop",
     duration: "Transformation & Abundance Program",
     highlight: "Quantum Science • Manifestation • Chakras",
@@ -77,6 +83,12 @@ const courses = [
 ];
 
 function Courses() {
+  const { courseSlug } = useParams();
+
+  const visibleCourses = courseSlug
+    ? courses.filter((course) => course.slug === courseSlug)
+    : courses;
+
   return (
     <section className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -88,19 +100,21 @@ function Courses() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
-            Our Transformational Courses
+            {courseSlug ? "Course Details" : "Our Transformational Courses"}
           </h1>
-          <p className="text-gray-700 max-w-3xl mx-auto text-lg">
-            Conscious programs designed to awaken clarity, confidence, purpose,
-            holistic health, and abundance in life.
-          </p>
+          {!courseSlug && (
+            <p className="text-gray-700 max-w-3xl mx-auto text-lg">
+              Conscious programs designed to awaken clarity, confidence, purpose,
+              holistic health, and abundance in life.
+            </p>
+          )}
         </motion.div>
 
         {/* Course Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {courses.map((course, index) => (
+          {visibleCourses.map((course, index) => (
             <motion.div
-              key={index}
+              key={course.slug}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.12 }}
