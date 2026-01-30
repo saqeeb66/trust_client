@@ -16,7 +16,7 @@ function AdminLogin() {
       localStorage.setItem("adminToken", res.data.token);
 
       // ✅ FIX 2: Correct redirect
-      navigate("/admin/queries");
+      navigate("/admin/dashboard");
     } catch (err) {
       alert("Invalid credentials");
     }
