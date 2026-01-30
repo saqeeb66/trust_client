@@ -89,21 +89,24 @@ function Courses() {
     ? courses.filter((course) => course.slug === courseSlug)
     : courses;
 
+  const isSingle = visibleCourses.length === 1;
+
   return (
-    <section className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="min-h-screen bg-gradient-to-b from-emerald-50 to-white py-20 px-4">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Page Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 max-w-4xl"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
             {courseSlug ? "Course Details" : "Our Transformational Courses"}
           </h1>
+
           {!courseSlug && (
-            <p className="text-gray-700 max-w-3xl mx-auto text-lg">
+            <p className="text-gray-700 text-lg">
               Conscious programs designed to awaken clarity, confidence, purpose,
               holistic health, and abundance in life.
             </p>
@@ -111,7 +114,13 @@ function Courses() {
         </motion.div>
 
         {/* Course Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div
+          className={`grid gap-10 w-full ${
+            isSingle
+              ? "grid-cols-1 max-w-4xl"
+              : "grid-cols-1 md:grid-cols-2 max-w-6xl"
+          }`}
+        >
           {visibleCourses.map((course, index) => (
             <motion.div
               key={course.slug}
@@ -119,10 +128,10 @@ function Courses() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.12 }}
               viewport={{ once: true }}
-              className="bg-white rounded-3xl shadow-lg p-8 border border-emerald-100 hover:shadow-2xl transition"
+              className="bg-white rounded-3xl shadow-lg p-10 border border-emerald-100 hover:shadow-2xl transition mx-auto"
             >
               {/* Header */}
-              <div className="mb-6">
+              <div className="mb-6 text-center">
                 <h2 className="text-3xl font-semibold text-emerald-700 mb-2">
                   {course.title}
                 </h2>
@@ -145,7 +154,7 @@ function Courses() {
               </ul>
 
               {/* Footer */}
-              <div className="mt-6 pt-4 border-t text-gray-600 italic">
+              <div className="mt-6 pt-4 border-t text-gray-600 italic text-center">
                 {course.footer}
               </div>
             </motion.div>
