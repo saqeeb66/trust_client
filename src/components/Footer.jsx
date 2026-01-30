@@ -24,11 +24,7 @@ function Footer() {
           viewport={{ once: true }}
           className="flex flex-col items-start gap-4"
         >
-          <img
-            src="/logo.jpeg"
-            alt="LTCharitableTrust"
-            className="h-11 w-auto opacity-90"
-          />
+          
 
           <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
             Empowering individuals through emotional well-being,
