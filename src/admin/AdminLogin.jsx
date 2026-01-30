@@ -12,11 +12,12 @@ function AdminLogin() {
     try {
       const res = await loginAdmin({ email, password });
 
-      // Save token
-      localStorage.setItem("token", res.data.token);
+      // ✅ FIX 1: Correct key name
+      localStorage.setItem("adminToken", res.data.token);
 
-      navigate("/admin/dashboard");
-    } catch {
+      // ✅ FIX 2: Correct redirect
+      navigate("/admin/queries");
+    } catch (err) {
       alert("Invalid credentials");
     }
   };
@@ -31,6 +32,7 @@ function AdminLogin() {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <input
@@ -39,6 +41,7 @@ function AdminLogin() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
 
         <button className="btn-primary w-full">Login</button>
