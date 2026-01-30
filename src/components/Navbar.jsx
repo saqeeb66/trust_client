@@ -4,59 +4,57 @@ import { Link, NavLink } from "react-router-dom";
 function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const navItems = [
-    { name: "About", path: "/about" },
-    { name: "Courses", path: "/courses" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
-    { name: "Terms and Conditions", path: "/terms" },
+  const courseLinks = [
+    { name: "Swarga Srushti", slug: "swarga-srushti" },
+    { name: "Life Transformation Workshop", slug: "life-transformation" },
+    { name: "Daily Magic Practice", slug: "daily-magic-practice" },
+    { name: "Health Workshop", slug: "health-workshop" },
+    { name: "HWLH Workshop", slug: "hwlh-workshop" },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        {/* Logo + Brand */}
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img
-            src="/logo.jpeg"
-            alt="Lifefullness Logo"
-            className="h-10 w-auto"
-          />
-          <span className="text-xl font-semibold text-dark hover:text-primary transition">
-            L T Charitable Trust
+          <img src="/logo.jpeg" alt="Logo" className="h-10" />
+          <span className="text-xl font-semibold text-dark">
+            LtCharitableTrust
           </span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              className={({ isActive }) =>
-                `text-sm font-medium transition ${
-                  isActive
-                    ? "text-primary"
-                    : "text-slate-700 hover:text-primary"
-                }`
-              }
-            >
-              {item.name}
-            </NavLink>
-          ))}
+          <NavLink to="/about" className="nav-link">About</NavLink>
 
-          {/* Donate CTA */}
-          <Link to="/donate" className="btn-primary">
-            Register
-          </Link>
+          {/* Courses Dropdown */}
+          <div className="relative group">
+            <NavLink to="/courses" className="nav-link">
+              Courses
+            </NavLink>
+
+            <div className="absolute left-0 mt-3 w-64 bg-white rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              {courseLinks.map((course) => (
+                <NavLink
+                  key={course.slug}
+                  to={`/courses/${course.slug}`}
+                  className="block px-5 py-3 text-sm hover:bg-emerald-50"
+                >
+                  {course.name}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+
+          <NavLink to="/terms" className="nav-link">Terms</NavLink>
+          <NavLink to="/gallery" className="nav-link">Gallery</NavLink>
+          <NavLink to="/contact" className="nav-link">Contact</NavLink>
+
+          <Link to="/donate" className="btn-primary">Donate</Link>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl focus:outline-none"
-          aria-label="Toggle menu"
-        >
+        {/* Mobile Button */}
+        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
           ☰
         </button>
       </nav>
@@ -64,23 +62,25 @@ function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white shadow-md px-6 py-6 space-y-4">
-          {navItems.map((item) => (
+          <Link to="/about" onClick={() => setOpen(false)}>About</Link>
+          <Link to="/courses" onClick={() => setOpen(false)}>Courses</Link>
+
+          {courseLinks.map((course) => (
             <Link
-              key={item.name}
-              to={item.path}
+              key={course.slug}
+              to={`/courses/${course.slug}`}
               onClick={() => setOpen(false)}
-              className="block text-slate-700 font-medium hover:text-primary"
+              className="block pl-4 text-sm text-slate-600"
             >
-              {item.name}
+              • {course.name}
             </Link>
           ))}
 
-          <Link
-            to="/donate"
-            onClick={() => setOpen(false)}
-            className="block text-center btn-primary"
-          >
-            Register
+          <Link to="/terms" onClick={() => setOpen(false)}>Terms</Link>
+          <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
+          <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
+          <Link to="/donate" onClick={() => setOpen(false)} className="btn-primary block text-center">
+            Donate
           </Link>
         </div>
       )}
