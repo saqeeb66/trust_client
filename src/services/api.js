@@ -1,15 +1,19 @@
 import axios from "axios";
 
-const API = axios.create({
+const api = axios.create({
   baseURL: "https://server-w3zp.onrender.com/api",
 });
 
-API.interceptors.request.use((config) => {
-  const token = localStorage.getItem("adminToken");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// Attach admin token automatically
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("adminToken");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
-export default API;
+export default api;
