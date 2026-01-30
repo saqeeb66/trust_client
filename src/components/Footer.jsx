@@ -1,10 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  FaInstagram,
-  FaYoutube,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -12,7 +8,7 @@ function Footer() {
       {/* Subtle background glow */}
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 via-transparent to-emerald-900/20" />
 
-      {/* MAIN FOOTER CONTENT */}
+      {/* MAIN CONTENT */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +52,7 @@ function Footer() {
             Reach Us
           </Link>
 
-          {/* Social Icons (Vertical) */}
+          {/* Social Icons (Vertical stack) */}
           <div className="flex flex-col gap-3 mt-2 text-lg">
             <motion.a
               whileHover={{ scale: 1.2, x: -4 }}
@@ -91,7 +87,7 @@ function Footer() {
         </motion.div>
       </motion.div>
 
-      {/* BOTTOM COPYRIGHT */}
+      {/* BOTTOM COPYRIGHT (CENTERED) */}
       <div className="border-t border-gray-700">
         <p className="text-center text-xs text-gray-400 py-4">
           © {new Date().getFullYear()} LTCharitableTrust · All Rights Reserved
