@@ -7,9 +7,9 @@ function Navbar() {
   const navItems = [
     { name: "About", path: "/about" },
     { name: "Courses", path: "/courses" },
-    { name: "Terms and Conditions", path: "/terms" },
     { name: "Gallery", path: "/gallery" },
     { name: "Contact", path: "/contact" },
+    { name: "Terms and Conditions", path: "/terms" },
   ];
 
   return (
@@ -23,7 +23,7 @@ function Navbar() {
             className="h-10 w-auto"
           />
           <span className="text-xl font-semibold text-dark hover:text-primary transition">
-            LtCharitableTrust
+            L T Charitable Trust
           </span>
         </Link>
 
@@ -47,7 +47,7 @@ function Navbar() {
 
           {/* Donate CTA */}
           <Link to="/donate" className="btn-primary">
-            Donate
+            Register
           </Link>
         </div>
 
@@ -80,7 +80,7 @@ function Navbar() {
             onClick={() => setOpen(false)}
             className="block text-center btn-primary"
           >
-            Donate
+            Register
           </Link>
         </div>
       )}
