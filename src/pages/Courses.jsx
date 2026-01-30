@@ -44,6 +44,36 @@ const courses = [
     footer:
       "A simple yet powerful daily ritual suitable for all levels, nurturing mindfulness, inner peace, and soulful well-being.",
   },
+  {
+    title: "Health Workshop",
+    duration: "Holistic Health Program",
+    highlight: "Disease-Free • Vitality • Self-Healing",
+    description: [
+      "A Health Workshop for those who love themselves and aspire to live a disease-free, energetic life.",
+      "Understand the root causes of diseases and how true health is created from within.",
+      "Learn how the human body is naturally designed to heal and thrive.",
+      "Discover how to eat, drink, and nourish your body for optimal health and longevity.",
+      "Understand the importance of nutrition and lifestyle choices in preventing illness.",
+      "Gain insights into living with minimal or no dependence on medicines.",
+    ],
+    footer:
+      "Ideal for individuals seeking holistic health, stronger immunity, and a vibrant, energized life.",
+  },
+  {
+    title: "Health • Wealth • Love • Happiness (HWLH) Workshop",
+    duration: "Transformation & Abundance Program",
+    highlight: "Quantum Science • Manifestation • Chakras",
+    description: [
+      "The Health Wealth Love & Happiness Workshop unlocks the secrets to holistic success and abundance.",
+      "Understand the root causes of success and how to become a magnet for prosperity in all areas of life.",
+      "Identify and shift limiting beliefs that block growth and fulfillment.",
+      "Learn manifestation techniques rooted in quantum physics to consciously shape your reality.",
+      "Discover the role of chakras in amplifying your energy and attracting positivity.",
+      "Align mind, body, and spirit to cultivate confidence, clarity, and a success-oriented mindset.",
+    ],
+    footer:
+      "Perfect for those seeking transformation in health, wealth, love, and happiness with purpose and confidence.",
+  },
 ];
 
 function Courses() {
@@ -62,7 +92,7 @@ function Courses() {
           </h1>
           <p className="text-gray-700 max-w-3xl mx-auto text-lg">
             Conscious programs designed to awaken clarity, confidence, purpose,
-            and holistic well-being.
+            holistic health, and abundance in life.
           </p>
         </motion.div>
 
@@ -73,7 +103,7 @@ function Courses() {
               key={index}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.15 }}
+              transition={{ duration: 0.7, delay: index * 0.12 }}
               viewport={{ once: true }}
               className="bg-white rounded-3xl shadow-lg p-8 border border-emerald-100 hover:shadow-2xl transition"
             >
@@ -107,38 +137,6 @@ function Courses() {
             </motion.div>
           ))}
         </div>
-
-        {/* Other Workshops */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="mt-20 bg-emerald-700 rounded-3xl p-10 text-white text-center"
-        >
-          <h2 className="text-3xl font-semibold mb-6">
-            Supporting Workshops & Practices
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-4 text-lg">
-            {[
-              "Health Workshop",
-              "H W L H Magician Workshop",
-            ].map((item, idx) => (
-              <span
-                key={idx}
-                className="bg-white/20 px-6 py-2 rounded-full backdrop-blur-sm"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <p className="mt-6 max-w-3xl mx-auto text-emerald-100">
-            These workshops complement the core programs by supporting physical
-            health, emotional balance, and energetic alignment.
-          </p>
-        </motion.div>
       </div>
     </section>
   );
