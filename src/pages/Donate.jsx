@@ -49,13 +49,6 @@ function Donate() {
 
                 <tr className="border-b">
                   <td className="p-4 font-medium bg-emerald-50">
-                    Customer ID
-                  </td>
-                  <td className="p-4">980455161</td>
-                </tr>
-
-                <tr className="border-b">
-                  <td className="p-4 font-medium bg-emerald-50">
                     Name of the Bank
                   </td>
                   <td className="p-4">AXIS BANK LIMITED</td>
@@ -89,7 +82,7 @@ function Donate() {
 
           {/* Footer Note */}
           <p className="mt-10 text-center text-gray-600 italic">
-            Donations may be eligible for tax benefits under applicable laws.
+            Join Our Tribe and get part of us .
           </p>
         </motion.div>
       </div>
