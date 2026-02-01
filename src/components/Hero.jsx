@@ -15,7 +15,7 @@ function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-sm pointer-events-none"></div>
 
       {/* Content */}
       <motion.div
