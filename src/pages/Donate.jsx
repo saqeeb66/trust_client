@@ -17,9 +17,9 @@ function Donate() {
           </h1>
 
           <p className="text-gray-700 text-center max-w-2xl mx-auto mb-10">
-            Your contribution helps us continue our mission of emotional healing,
-            conscious living, and community well-being.  
-            Please use the bank details below to support our initiatives.
+           Register for workshop to learn about emotional healing
+            , conscious living, and community well-being. 
+            Please use the bank details below to join our workshop.
           </p>
 
           {/* Bank Details Table */}
