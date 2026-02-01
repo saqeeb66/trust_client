@@ -37,6 +37,7 @@ function Router() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/register" element={<Navigate to="/donate" replace />} />
       </Route>
 
       {/* Admin */}
