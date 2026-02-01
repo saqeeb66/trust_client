@@ -66,11 +66,11 @@ const courses = [
   },
   {
     slug: "hwlh-workshop",
-    title: "Health • Wealth • Love • Happiness (Magical) Workshop",
+    title: "Health • Wealth • Love • Happiness • Magician Workshop",
     duration: "8 Days (1HR Daily - 9:00PM - 10:00 PM",
     highlight: "Quantum Science • Manifestation • Chakras",
     description: [
-      "The Health Wealth Love & Happiness Workshop unlocks the secrets to holistic success and abundance.",
+      "The Health Wealth Love Happiness & Magician  Workshop unlocks the secrets to holistic success and abundance.",
       "Understand the root causes of success and how to become a magnet for prosperity in all areas of life.",
       "Identify and shift limiting beliefs that block growth and fulfillment.",
       "Learn manifestation techniques rooted in quantum physics to consciously shape your reality.",
