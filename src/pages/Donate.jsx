@@ -13,7 +13,7 @@ function Donate() {
         >
           {/* Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-8 text-center">
-            Bank Donation Details
+            JOIN OUR TRIBE
           </h1>
 
           <p className="text-gray-700 text-center max-w-2xl mx-auto mb-10">
