@@ -17,7 +17,7 @@ function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src="/logo.jpeg" alt="Logo" className="h-10" />
+          <img src="" alt="Logo" className="h-10" />
           <span className="text-xl font-semibold text-dark">
             L T Charitable Trust
           </span>
