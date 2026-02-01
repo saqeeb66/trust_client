@@ -15,17 +15,16 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img src="" alt="Logo" className="h-10" />
-          <span className="text-xl font-semibold text-dark">
-            L T Charitable Trust
-          </span>
-        </Link>
+        {/* Brand Name (No Logo) */}
+        <span className="text-xl font-semibold text-slate-800">
+          L T Charitable Trust
+        </span>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <NavLink to="/about" className="nav-link">About</NavLink>
+          <NavLink to="/about" className="nav-link">
+            About
+          </NavLink>
 
           {/* Courses Dropdown */}
           <div className="relative group">
@@ -46,15 +45,28 @@ function Navbar() {
             </div>
           </div>
 
-          <NavLink to="/terms" className="nav-link">Terms</NavLink>
-          <NavLink to="/gallery" className="nav-link">Gallery</NavLink>
-          <NavLink to="/contact" className="nav-link">Contact</NavLink>
+          <NavLink to="/terms" className="nav-link">
+            Terms
+          </NavLink>
 
-          <Link to="/donate" className="btn-primary">Register</Link>
+          <NavLink to="/gallery" className="nav-link">
+            Gallery
+          </NavLink>
+
+          <NavLink to="/contact" className="nav-link">
+            Contact
+          </NavLink>
+
+          <Link to="/donate" className="btn-primary">
+            Register
+          </Link>
         </div>
 
-        {/* Mobile Button */}
-        <button onClick={() => setOpen(!open)} className="md:hidden text-2xl">
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl"
+        >
           ☰
         </button>
       </nav>
@@ -62,24 +74,72 @@ function Navbar() {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white shadow-md px-6 py-6 space-y-4">
-          <Link to="/about" onClick={() => setOpen(false)}>About</Link>
-          <Link to="/courses" onClick={() => setOpen(false)}>Courses</Link>
+          {/* About */}
+          <Link
+            to="/about"
+            onClick={() => setOpen(false)}
+            className="block font-medium text-slate-700"
+          >
+            About
+          </Link>
 
-          {courseLinks.map((course) => (
+          {/* Courses */}
+          <div>
             <Link
-              key={course.slug}
-              to={`/courses/${course.slug}`}
+              to="/courses"
               onClick={() => setOpen(false)}
-              className="block pl-4 text-sm text-slate-600"
+              className="block font-medium text-slate-700 mb-2"
             >
-              • {course.name}
+              Courses
             </Link>
-          ))}
 
-          <Link to="/terms" onClick={() => setOpen(false)}>Terms</Link>
-          <Link to="/gallery" onClick={() => setOpen(false)}>Gallery</Link>
-          <Link to="/contact" onClick={() => setOpen(false)}>Contact</Link>
-          <Link to="/donate" onClick={() => setOpen(false)} className="btn-primary block text-center">
+            <div className="pl-4 space-y-2">
+              {courseLinks.map((course) => (
+                <Link
+                  key={course.slug}
+                  to={`/courses/${course.slug}`}
+                  onClick={() => setOpen(false)}
+                  className="block text-sm text-slate-600"
+                >
+                  • {course.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Terms */}
+          <Link
+            to="/terms"
+            onClick={() => setOpen(false)}
+            className="block font-medium text-slate-700"
+          >
+            Terms
+          </Link>
+
+          {/* Gallery */}
+          <Link
+            to="/gallery"
+            onClick={() => setOpen(false)}
+            className="block font-medium text-slate-700"
+          >
+            Gallery
+          </Link>
+
+          {/* Contact */}
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="block font-medium text-slate-700"
+          >
+            Contact
+          </Link>
+
+          {/* Register */}
+          <Link
+            to="/donate"
+            onClick={() => setOpen(false)}
+            className="btn-primary block text-center mt-4"
+          >
             Register
           </Link>
         </div>
