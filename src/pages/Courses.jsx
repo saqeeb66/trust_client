@@ -20,7 +20,7 @@ const courses = [
   {
     slug: "life-transformation",
     title: "Life Transformation Workshop",
-    duration: "Foundational Program",
+    duration: "30 Days(1Hr Daily-Online-6:00AM to 7:00AM",
     highlight: "Clarity • Mindset • Success",
     description: [
       "The Life Transformation Workshop helps you unlock the core elements of a successful and fulfilling life.",
@@ -33,9 +33,9 @@ const courses = [
       "Perfect for those beginning their transformation journey and seeking direction, confidence, and success.",
   },
   {
-    slug: "daily-magic-practice",
+    slug: "daily-magic-practice(Free)",
     title: "Daily Magic Practice",
-    duration: "Ongoing Daily Practice",
+    duration: "(1Hr Daily -( 5:00AM - 6:00AM)Online)",
     highlight: "Holistic Living • Inner Energy • Joy",
     description: [
       "Daily Magic Practice is a holistic approach designed to transform your everyday life with awareness and joy.",
@@ -51,7 +51,7 @@ const courses = [
   {
     slug: "health-workshop",
     title: "Health Workshop",
-    duration: "Holistic Health Program",
+    duration: "1 Full Day (online and offline - 9:00AM TO 5:00PM)",
     highlight: "Disease-Free • Vitality • Self-Healing",
     description: [
       "A Health Workshop for those who love themselves and aspire to live a disease-free, energetic life.",
@@ -66,8 +66,8 @@ const courses = [
   },
   {
     slug: "hwlh-workshop",
-    title: "Health • Wealth • Love • Happiness (HWLH) Workshop",
-    duration: "Transformation & Abundance Program",
+    title: "Health • Wealth • Love • Happiness (Magical) Workshop",
+    duration: "8 Days (1HR Daily - 9:00PM - 10:00 PM",
     highlight: "Quantum Science • Manifestation • Chakras",
     description: [
       "The Health Wealth Love & Happiness Workshop unlocks the secrets to holistic success and abundance.",
