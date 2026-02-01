@@ -25,7 +25,7 @@ function Contact() {
     try {
       await submitContactForm(formData);
       setSuccess(
-        "Thank you for contacting LTCharitableTrust. Our team will reach out to you shortly."
+        "Thank you for contacting L T Charitable Trust. Our team will reach out to you shortly."
       );
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch {
@@ -48,7 +48,7 @@ function Contact() {
           <h1 className="text-4xl md:text-5xl mb-4">Contact Us</h1>
           <p className="text-slate-700 max-w-3xl mx-auto">
             We welcome your questions, collaboration requests, and interest in
-            supporting LTCharitableTrust.
+            supporting L T Charitable Trust.
           </p>
         </motion.div>
 
@@ -64,7 +64,7 @@ function Contact() {
             <div className="card">
               <h3 className="text-xl mb-2">Our Office</h3>
               <p className="text-slate-600 leading-relaxed">
-                LTCharitableTrust<br />
+                L T Charitable Trust<br />
                 NO 153, 6TH CROSS, VYALI KAVAL LAYOUT, BANGALORE NORTH, VIJAYANAGAR, BANGALORE, 560040 KARNATAKA INDIA
               </p>
             </div>
@@ -72,7 +72,7 @@ function Contact() {
             <div className="card">
               <h3 className="text-xl mb-2">Contact Details</h3>
               <p className="text-slate-600">📞 +91 9901814446</p>
-              <p className="text-slate-600">✉️ ltcharitabletrustblr@gmail.com</p>
+              <p className="text-slate-600">✉️ L T Charitable Trustblr@gmail.com</p>
             </div>
 
             <div className="card">
