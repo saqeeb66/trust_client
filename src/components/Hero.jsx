@@ -55,7 +55,10 @@ function Hero() {
           transition={{ delay: 0.6 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <Link to="/donate" className="btn-primary text-lg px-8 py-3">
+             <Link
+            to="/donate"
+            className="btn-primary text-lg px-10 py-3 inline-block"
+          >
             Register
           </Link>
 
