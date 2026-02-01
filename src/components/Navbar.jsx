@@ -5,10 +5,10 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   const courseLinks = [
-    { name: "Swarga Srushti", slug: "swarga-srushti" },
     { name: "Life Transformation Workshop", slug: "life-transformation" },
-    { name: "Daily Magic Practice", slug: "daily-magic-practice" },
+    { name: "Swarga Srushti", slug: "swarga-srushti" },
     { name: "Health Workshop", slug: "health-workshop" },
+    { name: "Daily Magic Practice", slug: "daily-magic-practice" },
     { name: "HWLH Workshop", slug: "hwlh-workshop" },
   ];
 
@@ -19,7 +19,7 @@ function Navbar() {
         <Link to="/" className="flex items-center gap-3">
           <img src="/logo.jpeg" alt="Logo" className="h-10" />
           <span className="text-xl font-semibold text-dark">
-            LtCharitableTrust
+            L T Charitable Trust
           </span>
         </Link>
 
