@@ -82,7 +82,9 @@ function Donate() {
 
           {/* Footer Note */}
           <p className="mt-10 text-center text-gray-600 italic">
-            Join Our Tribe and get part of us .
+            To Register Please Contact This Number - 
+            Or
+            Reach Us Through The Contact Form 
           </p>
         </motion.div>
       </div>
