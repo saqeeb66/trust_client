@@ -82,7 +82,7 @@ function Donate() {
 
           {/* Footer Note */}
           <p className="mt-10 text-center text-gray-600 italic">
-            To Register Please Contact This Number - 
+            To Register Please Contact This Number - +91 9901814446
             Or
             Reach Us Through The Contact Form 
           </p>
