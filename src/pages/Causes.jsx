@@ -5,11 +5,11 @@ function TermsAndConditions() {
     {
       title: "Terms & Conditions",
       desc:
-        "Welcome to LTCharitableTrust. By accessing or using our website, you agree to comply with the following terms and conditions. These terms govern your use of our website and services.",
+        "Welcome to L T Charitable Trust. By accessing or using our website, you agree to comply with the following terms and conditions. These terms govern your use of our website and services.",
       points: [
         "This website is intended to share information about our charitable activities and initiatives.",
         "Users agree to use this website only for lawful and ethical purposes.",
-        "All content including text, images, logos, and materials belong to LTCharitableTrust.",
+        "All content including text, images, logos, and materials belong to L T Charitable Trust.",
         "Unauthorized use or duplication of website content is prohibited.",
         "The Trust reserves the right to modify website content or policies at any time.",
       ],
@@ -17,7 +17,7 @@ function TermsAndConditions() {
     {
       title: "Privacy Policy",
       desc:
-        "LTCharitableTrust respects your privacy and is committed to protecting your personal information shared with us.",
+        "L T Charitable Trust respects your privacy and is committed to protecting your personal information shared with us.",
       points: [
         "We may collect basic personal details such as name, email address, phone number, and donation information.",
         "Personal information is collected only for communication, donation processing, and service improvement.",
@@ -29,7 +29,7 @@ function TermsAndConditions() {
     {
       title: "Refund & Cancellation Policy",
       desc:
-        "As a charitable organization, all donations made to LTCharitableTrust are voluntary and used to support our initiatives.",
+        "As a charitable organization, all donations made to L T Charitable Trust are voluntary and used to support our initiatives.",
       points: [
         "Donations once made are generally non-refundable.",
         "In case of a genuine error or duplicate transaction, donors may request a refund within 7 days.",
@@ -93,10 +93,10 @@ function TermsAndConditions() {
           className="mt-20 text-center"
         >
           <p className="text-slate-700">
-            <b>Contact:</b> contact@lifefullness.org
+            <b>Contact:</b>  ltcharitabletrustblr@gmail.com
           </p>
           <p className="text-slate-600 mt-2">
-            LTCharitableTrust, India
+            L T Charitable Trust, India
           </p>
           <p className="text-slate-500 text-sm mt-2">
             Last Updated: January 2026
